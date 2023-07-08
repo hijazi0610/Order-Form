@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <title>Order Form</title>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-child">
+            <h1>Order Form</h1>
+        <form id="new-task-form">
+            <div id="spacer">
+                <label for="first-name">First Name : </label>
+                <input type="text" id="first-name" class="all-input" placeholder="Karim" required>
+            </div>
+            <div id="spacer">
+                <label for="last-name">Last Name : </label>
+                <input type="text" id="last-name" class="all-input" placeholder="Ali" required>
+            </div>
+            <div id="no-spacer">
+                <label>Delivery : </label>
+                <input type="radio" onclick="revealDate()" id="yes" name="option">
+                <label for="yes" onclick="revealDate()">Yes</label>
+                <input type="radio" id="no" name="option">
+                <label for="no" onclick="hideDate()">No</label>
+            </div>
+            <div id="spacer" class="hidden" hidden>
+                <label for="date">Pickup Date</label>
+                <input type="date" id="date" class="all-input">
+            </div>
+            <div id="spacer">
+                <label for="number">Phone number :</label>
+                <input type="tel" id="number" class="all-input" min="0" placeholder="Phone number">
+            </div>
+            <div class="food" id="spacer">
+                <label for="food">Burger : </label>
+                <div class="food-select">
+                    <select id="food" name="food" class="select">
+                        <option value="benjo">Burger Benjo</option>
+                        <option value="ayam">Burger Ayam</option>
+                        <option value="daging">Burger Daging</option>
+                        <option value="rusa">Burger Rusa</option>
+                    </select>
+                    <input type="number" min="1" max="50" class="number-value" placeholder="1">
+                    <button class="add-food add-remove number-value">+</button>
+                    <button class="remove-food add-remove number-value">-</button><br>
+                </div>
+                <!-- <div class="food-select">
+                    <select id="food" name="food">
+                        <option value="benjo">Burger Benjo</option>
+                        <option value="ayam">Burger Ayam</option>
+                        <option value="daging">Burger Daging</option>
+                        <option value="rusa">Burger Rusa</option>
+                    </select>
+                    <input type="number" min="1" max="50" class="number-value" placeholder="1">
+                    <button class="add-food">Add</button>
+                </div> -->
+            </div>
+            <div class="drinks" id="spacer">
+                <label for="drinks">Drinks : </label>
+                <input type="text" id="drinks" class="all-input" placeholder="Drinks to order">
+                <input type="number" min="1" max="50" class="number-value" placeholder="1">
+                <button class="add-drinks add-remove number-value">+</button>
+                <button class="add-drinks add-remove number-value">-</button>
+            </div>
+            <button type="submit" id="submit" class="submit-button">Submit</button>
+        </form>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
